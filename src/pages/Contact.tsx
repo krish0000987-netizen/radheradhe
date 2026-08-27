@@ -1,4 +1,5 @@
 import { useState } from "react";
+import contactHero from "@/assets/radhe/indigo-1.jpeg";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -28,8 +29,8 @@ Notes: ${form.notes}`;
       {/* HERO */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=600&fit=crop&auto=format"
-          alt="Contact Shree Radhe Radhe Travels"
+          src={contactHero}
+          alt="Shree Radhe Radhe Indigo - Contact Us Ujjain"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

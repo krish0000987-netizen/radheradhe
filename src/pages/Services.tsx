@@ -1,3 +1,5 @@
+import servicesHero from "@/assets/radhe/innova-crysta.jpeg";
+
 interface ServicesProps {
   onNavigate: (page: string) => void;
 }
@@ -97,8 +99,8 @@ export default function Services({ onNavigate }: ServicesProps) {
       {/* HERO */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1784240256561-96f3264d221a?w=1920&h=800&fit=crop&auto=format"
-          alt="Transportation services"
+          src={servicesHero}
+          alt="Shree Radhe Radhe Innova Crysta - Premium Services MP09BD6826"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

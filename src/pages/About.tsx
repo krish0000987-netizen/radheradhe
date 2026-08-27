@@ -1,3 +1,5 @@
+import travellerSide from "@/assets/radhe/traveller-side.jpeg";
+
 interface AboutProps {
   onNavigate: (page: string) => void;
 }
@@ -19,8 +21,8 @@ export default function About({ onNavigate }: AboutProps) {
       {/* HERO */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=800&fit=crop&auto=format"
-          alt="Mahakaleshwar Temple Ujjain"
+          src={travellerSide}
+          alt="Shree Radhe Radhe Travels Fleet - Traveller Side View Ujjain"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

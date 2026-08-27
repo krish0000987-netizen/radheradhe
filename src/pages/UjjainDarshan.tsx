@@ -1,3 +1,5 @@
+import ujjainHero from "@/assets/radhe/traveller-solanki-1.jpeg";
+
 interface UjjainDarshanProps {
   onNavigate: (page: string) => void;
 }
@@ -71,8 +73,8 @@ export default function UjjainDarshan({ onNavigate }: UjjainDarshanProps) {
       {/* HERO */}
       <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=1080&fit=crop&auto=format"
-          alt="Mahakaleshwar Jyotirlinga Ujjain"
+          src={ujjainHero}
+          alt="Shree Radhe Radhe Traveller for Ujjain Darshan - Solanki Fleet"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/65" />

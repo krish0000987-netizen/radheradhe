@@ -6,6 +6,7 @@ import dzireImg from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.17_PM.jpeg";
 import travellerFront1Img from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.13_PM.jpeg";
 import travellerFront2Img from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.14_PM.jpeg";
 import indigoImg from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.15_PM__1_.jpeg";
+import vehiclesHero from "@/assets/radhe/traveller-front-adhiraj.jpeg";
 
 interface VehiclesProps {
   onNavigate: (page: string) => void;
@@ -104,8 +105,8 @@ export default function Vehicles({ onNavigate }: VehiclesProps) {
       {/* HERO */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1784240256561-96f3264d221a?w=1920&h=800&fit=crop&auto=format"
-          alt="Vehicle fleet road journey"
+          src={vehiclesHero}
+          alt="Shree Radhe Radhe Fleet - Force Traveller Adhiraj Ujjain"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

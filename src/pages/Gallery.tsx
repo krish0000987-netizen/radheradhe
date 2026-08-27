@@ -8,6 +8,7 @@ import travellerFront2Img from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.14_P
 import travellerFront3Img from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.14_PM__1_.jpeg";
 import indigoImg from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.15_PM__1_.jpeg";
 import travellerSideImg from "@/imports/WhatsApp_Image_2026-08-27_at_2.20.16_PM.jpeg";
+import galleryHero from "@/assets/radhe/traveller-rear.jpeg";
 
 const categories = ["All", "Our Vehicles", "Ujjain", "Destinations"];
 
@@ -48,8 +49,8 @@ export default function Gallery() {
       {/* HERO */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=600&fit=crop&auto=format"
-          alt="Gallery"
+          src={galleryHero}
+          alt="Shree Radhe Radhe Gallery - Traveller Rear View"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

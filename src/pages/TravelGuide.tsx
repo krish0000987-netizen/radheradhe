@@ -1,4 +1,5 @@
 import { useState } from "react";
+import guideHero from "@/assets/radhe/tavera-bittu.jpeg";
 
 interface TravelGuideProps {
   onNavigate: (page: string) => void;
@@ -103,8 +104,8 @@ export default function TravelGuide({ onNavigate }: TravelGuideProps) {
       {/* HERO */}
       <section className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=600&fit=crop&auto=format"
-          alt="Plan your Ujjain journey"
+          src={guideHero}
+          alt="Shree Radhe Radhe Tavera - Travel Guide"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />

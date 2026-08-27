@@ -1,3 +1,5 @@
+import packagesHero from "@/assets/radhe/solanki-2.jpeg";
+
 interface TourPackagesProps {
   onNavigate: (page: string) => void;
 }
@@ -58,8 +60,8 @@ export default function TourPackages({ onNavigate }: TourPackagesProps) {
       {/* HERO */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1784240256561-96f3264d221a?w=1920&h=800&fit=crop&auto=format"
-          alt="Travel destinations"
+          src={packagesHero}
+          alt="Shree Radhe Radhe Traveller Solanki - Tour Packages"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#1A1214]/70" />
