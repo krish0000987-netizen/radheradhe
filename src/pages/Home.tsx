@@ -155,9 +155,9 @@ export default function Home({ onNavigate }: HomeProps) {
   };
 
   return (
-    <div className="pb-16 md:pb-0">
+    <div className="pb-16 md:pb-0 overflow-x-hidden">
       {/* HERO */}
-      <section className="relative h-screen min-h-[600px] overflow-hidden">
+      <section className="relative h-[88vh] min-h-[560px] sm:min-h-[600px] sm:h-screen overflow-hidden">
         <div
           className="absolute inset-0 transition-opacity duration-500 bg-[#1A1214]"
           style={{ opacity: fade ? 1 : 0 }}
@@ -192,35 +192,35 @@ export default function Home({ onNavigate }: HomeProps) {
 
         {/* Hero content */}
         <div className="absolute inset-0 flex items-center z-10">
-          <div className="max-w-7xl mx-auto px-4 w-full pt-20">
+          <div className="max-w-7xl mx-auto px-4 w-full pt-16 sm:pt-20">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-3 mb-4 animate-fade-slide">
-                <img src={logo} alt="Logo" className="w-12 h-12 rounded-full bg-white p-1 shadow-lg border border-[#C9973A]/50" />
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1">
-                  <span className="text-white text-xs font-body font-semibold tracking-wider">SHRI RADHE RADHE • 9039223022</span>
+              <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 animate-fade-slide">
+                <img src={logo} alt="Shri Radhe Radhe Logo" className="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-white p-1 shadow-lg border border-[#C9973A]/50 flex-shrink-0" />
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-2.5 sm:px-3 py-1">
+                  <span className="text-white text-[10px] sm:text-xs font-body font-semibold tracking-wider">SHRI RADHE RADHE • 9039223022</span>
                 </div>
               </div>
-              <div className="section-label mb-4 animate-fade-slide">Ujjain · Mahakaleshwar · Madhya Pradesh</div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 animate-fade-slide" style={{ animationDelay: "0.1s" }}>
+              <div className="section-label mb-3 sm:mb-4 animate-fade-slide text-[11px] sm:text-xs">Ujjain · Mahakaleshwar · Madhya Pradesh</div>
+              <h1 className="font-display text-[30px] leading-[1.1] xs:text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-4 animate-fade-slide" style={{ animationDelay: "0.1s" }}>
                 Your Trusted Travel<br />Partner in <span className="text-[#C9973A]">Ujjain</span>
               </h1>
-              <p className="text-white/80 font-body text-lg leading-relaxed mb-8 max-w-xl animate-fade-slide" style={{ animationDelay: "0.2s" }}>
+              <p className="text-white/80 font-body text-[15px] sm:text-lg leading-relaxed mb-6 sm:mb-8 max-w-xl animate-fade-slide" style={{ animationDelay: "0.2s" }}>
                 Premium Cars, Comfortable Journeys & Reliable Travel Services Around Mahakaleshwar and Beyond.
               </p>
-              <div className="flex flex-wrap gap-3 animate-fade-slide" style={{ animationDelay: "0.3s" }}>
-                <button onClick={() => nav("contact")} className="btn-primary text-sm">
+              <div className="flex flex-col xs:flex-row flex-wrap gap-3 animate-fade-slide" style={{ animationDelay: "0.3s" }}>
+                <button onClick={() => nav("contact")} className="btn-primary text-sm w-full xs:w-auto justify-center">
                   Book Your Vehicle →
                 </button>
-                <a href="tel:9039223022" className="btn-outline text-sm">
+                <a href="tel:9039223022" className="btn-outline text-sm w-full xs:w-auto justify-center">
                   📞 Call Now
                 </a>
               </div>
 
               {/* Trust strip */}
-              <div className="mt-10 flex flex-wrap gap-5 animate-fade-slide" style={{ animationDelay: "0.4s" }}>
+              <div className="mt-8 sm:mt-10 flex flex-wrap gap-2.5 sm:gap-5 animate-fade-slide" style={{ animationDelay: "0.4s" }}>
                 {["All Vehicle Categories", "Professional Service", "Comfortable Travel", "Ujjain-Based"].map((t) => (
-                  <div key={t} className="flex items-center gap-2 text-white/80 text-sm font-body">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9973A]" />
+                  <div key={t} className="flex items-center gap-2 text-white/80 text-xs sm:text-sm font-body">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C9973A] flex-shrink-0" />
                     {t}
                   </div>
                 ))}
@@ -232,13 +232,13 @@ export default function Home({ onNavigate }: HomeProps) {
 
       {/* QUICK BOOKING PANEL */}
       <section className="bg-white shadow-lg relative z-20 -mt-0.5">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-3 items-end">
-            <div className="col-span-2 md:col-span-1">
+        <div className="max-w-7xl mx-auto px-4 py-5 sm:py-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3 sm:gap-3 items-end">
+            <div className="sm:col-span-1">
               <label className="text-xs text-[#7A6A5A] font-body font-semibold uppercase tracking-wider block mb-1">Pickup</label>
               <input type="text" placeholder="Ujjain" className="w-full border border-[#E0D4C0] rounded px-3 py-2.5 text-sm font-body focus:outline-none focus:border-[#6B1E2E] bg-[#FAF6F0]" />
             </div>
-            <div className="col-span-2 md:col-span-1">
+            <div className="sm:col-span-1">
               <label className="text-xs text-[#7A6A5A] font-body font-semibold uppercase tracking-wider block mb-1">Destination</label>
               <input type="text" placeholder="Where to?" className="w-full border border-[#E0D4C0] rounded px-3 py-2.5 text-sm font-body focus:outline-none focus:border-[#6B1E2E] bg-[#FAF6F0]" />
             </div>
@@ -274,7 +274,7 @@ export default function Home({ onNavigate }: HomeProps) {
             </div>
             <button
               onClick={() => nav("contact")}
-              className="btn-primary justify-center w-full"
+              className="btn-primary justify-center w-full sm:col-span-2 lg:col-span-1 py-2.5"
             >
               Get Quote
             </button>
@@ -283,7 +283,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* WHY CHOOSE US */}
-      <section className="py-20 bg-[#FAF6F0]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF6F0]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3">Why Choose Us</div>
@@ -312,7 +312,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* OUR FLEET */}
-      <section className="py-20 bg-[#1A1214]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#1A1214]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3" style={{ color: "#C9973A" }}>Our Fleet</div>
@@ -321,10 +321,10 @@ export default function Home({ onNavigate }: HomeProps) {
             </h2>
             <div className="gold-divider mx-auto" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {vehicles.map((v) => (
               <div key={v.category} className="bg-[#261820] rounded-xl overflow-hidden card-hover border border-[#3A2830]">
-                <div className="img-hover-zoom h-44">
+                <div className="img-hover-zoom h-48 sm:h-44">
                   <img src={v.image} alt={v.category} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <div className="p-5">
@@ -359,7 +359,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* REAL FLEET GALLERY - Images from /radhe folder */}
-      <section className="py-20 bg-[#FAF6F0]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF6F0]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-10">
             <div className="section-label mb-3">Our Actual Fleet</div>
@@ -373,22 +373,22 @@ export default function Home({ onNavigate }: HomeProps) {
           </div>
 
           {/* Logo showcase */}
-          <div className="flex justify-center mb-10">
-            <div className="bg-[#1A1214] rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 shadow-lg border border-[#3A2830]">
-              <img src={logo} alt="Shri Radhe Radhe Tour & Travels Logo" className="w-40 h-40 object-contain bg-white rounded-xl p-2" />
-              <div className="text-center md:text-left">
-                <h3 className="font-display text-xl font-bold text-white">SHRI RADHE RADHE TOUR & TRAVELS</h3>
-                <p className="text-[#C9973A] font-body text-lg tracking-[0.3em] font-semibold mt-1">9039223022</p>
+          <div className="flex justify-center mb-8 sm:mb-10 px-2">
+            <div className="bg-[#1A1214] rounded-2xl p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center gap-5 sm:gap-6 shadow-lg border border-[#3A2830] w-full max-w-2xl">
+              <img src={logo} alt="Shri Radhe Radhe Tour & Travels Logo" className="w-32 h-32 sm:w-40 sm:h-40 object-contain bg-white rounded-xl p-2 flex-shrink-0" />
+              <div className="text-center md:text-left w-full">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-white leading-tight">SHRI RADHE RADHE TOUR & TRAVELS</h3>
+                <p className="text-[#C9973A] font-body text-base sm:text-lg tracking-[0.25em] sm:tracking-[0.3em] font-semibold mt-1">9039223022</p>
                 <p className="text-white/60 text-xs font-body mt-2">Ujjain • Mahakaleshwar • Trusted Local Fleet</p>
-                <div className="mt-4 flex gap-2 justify-center md:justify-start">
-                  <a href="tel:9039223022" className="btn-gold text-xs py-2 px-4">Call Now</a>
-                  <a href="https://wa.me/919039223022" target="_blank" rel="noopener noreferrer" className="btn-outline text-xs py-2 px-4 !border-[#C9973A] !text-[#C9973A]">WhatsApp</a>
+                <div className="mt-4 flex flex-col xs:flex-row gap-2 justify-center md:justify-start">
+                  <a href="tel:9039223022" className="btn-gold text-xs py-2.5 px-4 justify-center">Call Now</a>
+                  <a href="https://wa.me/919039223022" target="_blank" rel="noopener noreferrer" className="btn-outline text-xs py-2.5 px-4 justify-center !border-[#C9973A] !text-[#C9973A]">WhatsApp</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
             {realFleet.map((v) => (
               <div key={v.plate} className="bg-white rounded-xl overflow-hidden border border-[#E0D4C0] card-hover group">
                 <div className="h-40 overflow-hidden bg-[#1A1214]">
@@ -409,7 +409,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* EXPLORE UJJAIN */}
-      <section className="py-20 bg-[#FAF6F0]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF6F0]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3">Sacred Destinations</div>
@@ -440,7 +440,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* SERVICES */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3">What We Offer</div>
@@ -449,9 +449,9 @@ export default function Home({ onNavigate }: HomeProps) {
             </h2>
             <div className="gold-divider mx-auto" />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-5">
             {services.map((s) => (
-              <div key={s.title} className="p-6 rounded-xl border border-[#E0D4C0] card-hover bg-[#FAF6F0] flex gap-4">
+              <div key={s.title} className="p-5 sm:p-6 rounded-xl border border-[#E0D4C0] card-hover bg-[#FAF6F0] flex gap-3 sm:gap-4">
                 <span className="text-3xl flex-shrink-0">{s.icon}</span>
                 <div>
                   <h3 className="font-display text-base font-semibold text-[#6B1E2E] mb-1">{s.title}</h3>
@@ -469,7 +469,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* HOW BOOKING WORKS */}
-      <section className="py-20 bg-[#6B1E2E]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#6B1E2E]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3" style={{ color: "#C9973A" }}>Easy Process</div>
@@ -496,7 +496,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 bg-[#FAF6F0]">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#FAF6F0]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-14">
             <div className="section-label mb-3">What Travellers Say</div>
@@ -541,7 +541,7 @@ export default function Home({ onNavigate }: HomeProps) {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-20 bg-[#1A1214] relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 bg-[#1A1214] relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img src="https://images.unsplash.com/photo-1658730487395-dcc99f5d997c?w=1920&h=600&fit=crop&auto=format" alt="" className="w-full h-full object-cover" />
         </div>

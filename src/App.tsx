@@ -40,9 +40,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF6F0]">
+    <div className="min-h-screen flex flex-col bg-[#FAF6F0] overflow-x-hidden">
       <Navbar currentPage={page} onNavigate={navigate} />
-      <main className="flex-1">
+      <main className="flex-1 overflow-x-hidden">
         {renderPage()}
       </main>
       <Footer onNavigate={navigate} />
